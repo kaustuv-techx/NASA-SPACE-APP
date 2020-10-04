@@ -1,0 +1,954 @@
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.nasa-logo {
+    background-image: url(./images/nasa-logo.png);
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+/* article  */
+
+.article_show {
+    top: 0px !important;
+}
+.fa-angle-left {
+    color: white;
+    size: 7x;
+}
+.wrap_article {
+    position: fixed;
+    display: block;
+    top: 100%;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 10000;
+    transition: all 500ms;
+}
+.wrap_article .wrapbody {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    background-color: #111111;
+}
+.wrap_article .wrapbody .close_article {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+}
+.wrap_article .article {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% - 60px);
+    background-color: white;
+    border-radius: 21px 21px 0 0;
+    overflow-y: scroll;
+}
+.wrap_article .article::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: white;
+}
+.wrap_article .article::-webkit-scrollbar {
+    width: 5px;
+    background-color: white;
+}
+.wrap_article .article::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background-color: #111111;
+}
+.wrap_article .article .articleheader {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrap_article .article .articleheader .heading {
+    font-weight: 800;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 30px;
+    color: white;
+    transition: all 400ms;
+    z-index: 10;
+}
+.wrap_article .article .articleheader .heading:hover {
+    color: crimson;
+}
+.wrap_article .article .articlebody {
+    /* color: white; */
+    font-family: Poppins, sans-serif;
+    padding: 40px;
+    line-height: 40px;
+    font-weight: 300;
+}
+/* article body image  */
+.articlebody img,
+.column-left img {
+    position: relative;
+    left: calc(50% - 250px);
+    align-self: center;
+    width: 500px;
+    height: auto;
+    border-radius: 21px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+/* card_backgrounds */
+.climate {
+    background-image: url(./images/climatic_changes.jpeg);
+}
+.earth_article {
+    background-image: url(./images/earth\ science\ image\ 1.png);
+}
+.climatic_changes {
+    background-image: url(./images/climatic_changes.jpeg);
+}
+.future_article {
+    background-image: url("./images/futureEarth/Death\ of\ the\ sun..jpg");
+}
+.aerosol_card {
+    background-image: url(./images/aerosols\ 1.jpg);
+}
+.wildfire_card {
+    background-image: url(./images/wildlife\ fire\ 1.jpg);
+}
+.ozone_card {
+    background-image: url(./images/losing\ of\ ozone\ 3.jpg);
+}
+.condition_card {
+    background-image: url(./images/nasa1.jpg);
+}
+.disaster_card {
+    background-image: url(./images/windstorm_insurance_homeowners_property_NJ_NY_CA_FL_primeins.jpg);
+}
+.warming_card {
+    background-image: url(./images/global\ warming\ 1.jpg);
+}
+
+/* article backgrounds */
+.header_bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.earthscience_bg {
+    background-image: url(./images/earth\ science\ image\ 1.png);
+}
+.how_bg {
+    background-image: url(./images/wildlife\ fire\ 1.jpg);
+}
+.ozone_bg {
+    background-image: url(./images/losing\ of\ ozone\ 3.jpg);
+}
+.aerosol_bg {
+    background-image: url(./images/aerosols\ 1.jpg);
+}
+.warming_bg {
+    background-image: url(./images/global\ warming\ 1.jpg);
+}
+.disaster_bg {
+    background-image: url(./images/windstorm_insurance_homeowners_property_NJ_NY_CA_FL_primeins.jpg);
+}
+.condition_bg {
+    background-image: url(./images/nasa1.jpg);
+}
+.futureearth_bg {
+    background-image: url("./images/futureEarth/Death\ of\ the\ sun..jpg");
+}
+
+/* all similar content styling codes */
+
+section {
+    padding: 100px 0;
+}
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+section .max-width video {
+    position: relative;
+    width: 80%;
+    align-self: center;
+    height: auto;
+    border-radius: 21px;
+    outline: none;
+    left: calc(50% - 40%);
+}
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: "Ubuntu", sans-serif;
+}
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+/* navbar styling */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: "Ubuntu", sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky {
+    padding: 15px 0;
+    background: crimson;
+}
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span {
+    color: crimson;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span {
+    color: #fff;
+}
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover {
+    color: #fff;
+}
+
+/* menu btn stylling */
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn-a {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 999999999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn-a.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover {
+    filter: brightness(90%);
+}
+.scroll-up-btn-a:hover {
+    filter: brightness(90%);
+}
+/* home section styling */
+.home {
+    display: flex;
+    background-image: url("images/Background-imag.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    background-size: cover;
+    color: #ffffff;
+    min-height: 500px;
+    font-family: "Ubuntu", sans-serif;
+    transition: all 900ms;
+}
+.home .max-width {
+    margin: auto 0 auto 30px;
+}
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+.home .home-content .text-2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span {
+    color: crimson;
+    font-weight: 500;
+}
+.home .home-content a,
+.covid-a {
+    display: inline-block;
+    background: crimson;
+    color: #ffffff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover,
+.covid-a:hover {
+    color: crimson;
+    background: none;
+}
+
+.partners a {
+    color: white;
+}
+
+/* all similar content styling code */
+section {
+    padding: 100px 0;
+}
+
+.about,
+.resources,
+.history,
+.teams,
+.contact,
+.covid,
+.sponsor footer {
+    font-family: "Poppins", sans-serif;
+
+}
+.about .about-content,
+.resources .res-content,
+.history .history-content,
+.contact .contact-content,
+.covid .covid-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.covid {
+    background-image: url(./images/coronavirus-covid.png);
+    /* background-position: center; */
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    color: white;
+}
+.covid-content {
+    font-weight: 300;
+}
+.covid-content a {
+    color: white;
+}
+.covid-content a:hover {
+    color: crimson;
+}
+
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: "Ubuntu", sans-serif;
+}
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111111;
+    transform: trans;
+}
+section .title::after {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* about section styling */
+
+.about .title::after {
+    content: "who we are";
+}
+.about .about-content .left {
+    width: 45%;
+}
+.about .about-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .left video {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .about-content .right {
+    width: 55%;
+}
+.about .about-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span {
+    color: crimson;
+}
+.about .about-content .right p {
+    text-align: justify;
+    font-size: 25px;
+}
+
+.about .about-content .right a {
+    display: inline-block;
+    background: crimson;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover {
+    color: crimson;
+    background: none;
+}
+
+/* resources section styling */
+.resources,
+.partners,
+.teams {
+    color: #fff;
+    background: #111111;
+}
+.resources .title::before,
+.teams .title::before,
+.partners .title::before,
+.covid .title::before {
+    background: #fff;
+}
+.resources .title::after,
+.teams .title::after {
+    background: #111111;
+    content: "what we provide";
+}
+.resources .res-content .card {
+    width: calc(33% - 20px);
+    background-color: #222222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 400ms ease;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background: #222222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease; */
+}
+footer a{
+    color: white;
+}
+.resources .res-content .cards {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #222222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    height: 300px;
+    transition: all 400ms ease;
+}
+
+.resources .res-content .card:hover,
+.resources .res-content .cards:hover {
+    background: crimson;
+}
+.resources .res-content .card .box,
+.resources .res-content .cards .box {
+    transition: all 0.3s ease;
+}
+.resources .res-content .card:hover .box,
+.resources .res-content .cards:hover .box {
+    transform: scale(1.05);
+}
+.resources .res-content .card i,
+.resources .res-content .cards i {
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.resources .res-content .card:hover i,
+.resources .res-content .cards:hover i {
+    color: #fff;
+}
+.resources .res-content .card .text,
+.resources .res-content .cards .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+/* history section styling */
+
+.history .title::after {
+    content: "what it holds";
+}
+.history .history-content .column {
+    width: calc(50% -30px);
+}
+
+/* teams section styling */
+.teams .title::after {
+    content: "who with me";
+}
+.teams .carousel .card {
+    background: #222222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover {
+    background: crimson;
+}
+.teams .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover .box {
+    transform: scale(1.05);
+}
+.teams .carousel .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.teams .carousel .card img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card .sponsor img {
+    width: auto;
+    max-width: 190px;
+    height: 150px;
+    border: none;
+    object-fit: fill;
+    border-radius: 0;
+}
+.teams .carousel .card:hover img {
+    border-color: #fff;
+}
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid crimson !important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover {
+    background: crimson !important;
+}
+
+/* contact section styling */
+/* .contact .title::after {
+    content: "get in touch";
+} */
+.contact .contact-content .column {
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p {
+    text-align: justify;
+}
+.contact .contact-content .left .icons {
+    margin: 10px 0;
+}
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info {
+    margin-left: 30px;
+}
+.contact .contact-content .row i {
+    font-size: 25px;
+    color: crimson;
+}
+.contact .contact-content .info .head {
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title {
+    color: #333;
+}
+.contact .right form .fields {
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea {
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name {
+    margin-right: 10px;
+}
+.contact .right form .email {
+    margin-left: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus {
+    border-color: #b3b3b3;
+}
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button {
+    height: 47px;
+    width: 170px;
+}
+.contact .right form .button button {
+    width: 100%;
+    height: 100%;
+    border: 2px solid crimson;
+    background: crimson;
+    color: #fff;
+    outline: none;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover {
+    color: crimson;
+    background: none;
+}
+
+/* partners  */
+.partners .title::after {
+    content: "our partners";
+}
+
+/* footer section styling */
+footer {
+    background: #111111;
+    padding: 20px 23px;
+    color: #fff;
+}
+footer span a {
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover {
+    text-decoration: underline;
+}
+
+/* responsive media query start */
+@media (max-width: 1300px) {
+    .home .max-width {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px) {
+    .about .about-content .left img {
+        height: 350px;
+        width: 350px;
+    }
+    .about .about-content .left video {
+        width: 100%;
+        left: calc(50% - 50%);
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2 {
+        font-size: 70px;
+    }
+    .home .home-content .text-3 {
+        font-size: 35px;
+    }
+    .home .home-content a {
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width {
+        max-width: 930px;
+    }
+    .about .about-content .column {
+        width: 100%;
+    }
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right {
+        flex: 100%;
+    }
+    .resources .res-content .card {
+        /* width: calc(50% - 10px); */
+        margin-bottom: 20px;
+    }
+    .history .history-content .column,
+    .contact .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+@media (max-width: 500px) {
+    /* article body image  */
+    .articlebody img,
+    .column-left img {
+        width: 100%;
+        height: auto;
+        left: calc(50% - 50%);
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width {
+        padding: 0 23px;
+    }
+    .home .home-content .text-2 {
+        font-size: 60px;
+    }
+    .home .home-content .text-3 {
+        font-size: 32px;
+    }
+    .home .home-content a {
+        font-size: 20px;
+    }
+    .resources .res-content .card {
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    .home .home-content .text-2 {
+        font-size: 50px;
+    }
+    .home .home-content .text-3 {
+        font-size: 27px;
+    }
+    .about .about-content .right .text,
+    .history .history-content .left .text {
+        font-size: 19px;
+    }
+    .contact .right form .fields {
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email {
+        margin: 0;
+    }
+    .scroll-up-btn {
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
